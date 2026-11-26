@@ -107,6 +107,69 @@
     });
   });
 
+  /* ---------- Demo video dialog ---------- */
+  var dialog = document.getElementById("video-dialog");
+  var player = document.getElementById("video-player");
+  var videoTitle = document.getElementById("video-title");
+  var videoError = document.getElementById("video-error");
+  var frame = document.getElementById("video-frame");
+  var lastTrigger = null;
+
+  // Turns YouTube / Google Drive share links into embeddable URLs; returns null for local files
+  function toEmbedUrl(url) {
+    var m = url.match(/(?:youtube\.com\/watch\?(?:.*&)?v=|youtu\.be\/|youtube\.com\/embed\/)([\w-]{6,})/);
+    if (m) return "https://www.youtube.com/embed/" + m[1] + "?rel=0&autoplay=1";
+    m = url.match(/drive\.google\.com\/file\/d\/([\w-]+)/);
+    if (m) return "https://drive.google.com/file/d/" + m[1] + "/preview";
+    return null;
+  }
+
+  function closeVideo() {
+    if (dialog.open) dialog.close();
+  }
+
+  document.querySelectorAll(".demo-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      lastTrigger = btn;
+      videoTitle.textContent = btn.dataset.title || "Project demo";
+      videoError.hidden = true;
+
+      var embed = toEmbedUrl(btn.dataset.video);
+      if (embed) {
+        // YouTube or Google Drive link: show it in an iframe inside the modal
+        player.hidden = true;
+        frame.hidden = false;
+        frame.src = embed;
+        dialog.showModal();
+      } else {
+        // Local .mp4 file in the assets folder
+        frame.hidden = true;
+        player.hidden = false;
+        player.src = btn.dataset.video;
+        dialog.showModal();
+        var p = player.play();
+        if (p && p.catch) p.catch(function () { /* autoplay blocked, user can press play */ });
+      }
+    });
+  });
+
+  player.addEventListener("error", function () { videoError.hidden = false; });
+  document.getElementById("video-close").addEventListener("click", closeVideo);
+
+  // Click on the dark backdrop closes the dialog
+  dialog.addEventListener("click", function (e) {
+    if (e.target === dialog) closeVideo();
+  });
+
+  // Runs for Escape, the close button and the backdrop: stop playback and free the file
+  dialog.addEventListener("close", function () {
+    player.pause();
+    player.removeAttribute("src");
+    player.load();
+    frame.removeAttribute("src");   // stops YouTube / Drive playback
+    if (lastTrigger) lastTrigger.focus();
+  });
+
   /* ---------- Footer year ---------- */
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
