@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Allen Joy Lacuesta, BSIT 4th year student who loves making documents, spreadsheets and presentations clear, colorful and beautiful." />
+  <title>Allen Joy Lacuesta | BSIT 4th Year Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Allen Joy Lacuesta, back to top">AJ<span>.</span></a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#opensource">Open Source</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ABOUT / HERO -->
+    <section class="hero" id="about" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="avatar-wrap">
+          <img class="avatar" src="/asset/b96cbe18-2174-4d26-aa1d-1766655609b1.jpg" alt="Illustrated portrait of Allen Joy Lacuesta" width="340" height="340" />
+        </div>
+        <div class="hero-text">
+          <p class="bubble">Hello, so lovely to meet you!</p>
+          <h1 id="hero-title">I'm Allen Joy Lacuesta</h1>
+          <p class="title">BSIT 4th Year Student &amp; Microsoft Office Enthusiast</p>
+          <p>
+            I'm a fourth-year IT student who adores turning plain pages, messy rows and empty slides
+            into something clear, colorful and a joy to look at. Give me a blank document, a spreadsheet
+            full of numbers or a new presentation, and I'll make it tidy, polished and pretty.
+          </p>
+          <p>
+            <strong>My dream:</strong> to bring my cheerful eye for detail to a warm, hardworking team,
+            where I can organize, present and build helpful things that make everyone's day a little brighter.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/allenjoy-lacuesta-09a190452?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn btn-outline" href="#contact">Contact me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Technical Skills</h2>
+        <p class="section-intro">My favorite tools for making work look good and run smoothly.</p>
+        <div class="skills-grid">
+          <article class="skill-group">
+            <h3>Microsoft Word</h3>
+            <ul class="badges">
+              <li>Formatting &amp; Styles</li><li>Reports &amp; Letters</li><li>Mail Merge</li><li>Table of Contents</li><li>Templates</li><li>Track Changes</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Microsoft Excel</h3>
+            <ul class="badges">
+              <li>Formulas &amp; Functions</li><li>Pivot Tables</li><li>Charts</li><li>Data Cleaning</li><li>Conditional Formatting</li><li>XLOOKUP</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Microsoft PowerPoint</h3>
+            <ul class="badges">
+              <li>Slide Design</li><li>Slide Master</li><li>Animations</li><li>Infographics</li><li>Presenting</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Web &amp; Tools</h3>
+            <ul class="badges">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>PHP</li><li>Git &amp; GitHub</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Featured Projects</h2>
+
+        <div class="filters" role="group" aria-label="Filter projects by technology">
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="javascript" aria-pressed="false">JavaScript</button>
+          <button class="filter-btn" type="button" data-filter="python" aria-pressed="false">Python</button>
+          <button class="filter-btn" type="button" data-filter="php" aria-pressed="false">PHP</button>
+        </div>
+
+        <div class="cards" id="project-cards">
+          <article class="card" data-tags="javascript php">
+            <img src="/asset/Screenshot 2026-11-04 141849.png" alt="Screenshot of the Scilearn app" loading="lazy" width="600" height="360" />
+            <div class="card-body">
+              <h3>Scilearn</h3>
+              <p>A cheerful web app that helps students follow their biology learning journey, one happy lesson at a time.</p>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li></ul>
+              <div class="card-links">
+                <a href="https://github.com/your-username/scilearn" target="_blank" rel="noopener noreferrer">Source code</a>
+                <a href="https://scilearn.infinityfreeapp.com/?i=1" target="_blank" rel="noopener noreferrer">Live demo</a>
+                <button class="demo-btn" type="button" data-video="assets/scilearn-demo.mp4" data-title="Scilearn demo">&#9654; Watch demo</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-tags="python">
+            <img src="assets/project2.svg" alt="Screenshot of the Expense Analyzer dashboard" loading="lazy" width="600" height="360" />
+            <div class="card-body">
+              <h3>Expense Analyzer</h3>
+              <p>A friendly Flask app that turns bank statements into pretty charts, so spending habits are easy to see.</p>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>SQLite</li></ul>
+              <div class="card-links">
+                <a href="https://github.com/your-username/expense-analyzer" target="_blank" rel="noopener noreferrer">Source code</a>
+                <button class="demo-btn" type="button" data-video="assets/expense-analyzer-demo.mp4" data-title="Expense Analyzer demo">&#9654; Watch demo</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-tags="php">
+            <img src="assets/project3.svg" alt="Screenshot of the Library Management System" loading="lazy" width="600" height="360" />
+            <div class="card-body">
+              <h3>Library Manager</h3>
+              <p>A cozy PHP and MySQL system that keeps every book, borrower and due date neatly organized.</p>
+              <ul class="tags"><li>PHP</li><li>MySQL</li><li>Docker</li></ul>
+              <div class="card-links">
+                <a href="https://github.com/your-username/library-manager" target="_blank" rel="noopener noreferrer">Source code</a>
+                <button class="demo-btn" type="button" data-video="assets/library-manager-demo.mp4" data-title="Library Manager demo">&#9654; Watch demo</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="empty-state" id="empty-state" hidden>No projects match this filter yet.</p>
+      </div>
+    </section>
+
+    <!-- OPEN SOURCE & CAPSTONE -->
+    <section class="section" id="opensource" aria-labelledby="os-title">
+      <div class="container">
+        <h2 id="os-title">Open Source &amp; Capstone</h2>
+        <div class="showcase">
+          <article class="showcase-item">
+            <h3>CIT 240 Capstone</h3>
+            <p>The project I'm proudest of: tell the story of the problem it solves, what I built, and the smiles it brought.</p>
+            <a href="https://github.com/your-username/cit240-capstone" target="_blank" rel="noopener noreferrer">View repository &rarr;</a>
+          </article>
+          <article class="showcase-item">
+            <h3>Open Source Contribution</h3>
+            <p>A little fix, a kinder doc or a new idea shared with the community, because every contribution helps.</p>
+            <a href="https://github.com/owner/project/pull/1" target="_blank" rel="noopener noreferrer">View pull request &rarr;</a>
+          </article>
+          <article class="showcase-item">
+            <h3>Course Highlights</h3>
+            <p>Teamwork through pull requests, learning how open source licenses work, and sharing my work with the world on GitHub Pages.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section alt" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <h2 id="contact-title">Let's Connect</h2>
+        <p>I'd love to hear from you! Whether it's an internship, a collaboration or just a friendly hello, my inbox is always open.</p>
+        <p><a class="btn btn-primary" href="mailto:you@example.com">you@example.com</a></p>
+        <ul class="socials">
+          <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/allenjoy-lacuesta-09a190452?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Allen Joy Lacuesta. Made with care using HTML, CSS &amp; vanilla JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Project demo video player -->
+  <dialog class="video-dialog" id="video-dialog" aria-labelledby="video-title">
+    <div class="video-head">
+      <h2 id="video-title">Project demo</h2>
+      <button class="video-close" id="video-close" type="button" aria-label="Close video">&times;</button>
+    </div>
+    <video id="video-player" controls playsinline preload="none"></video>
+    <p class="video-error" id="video-error" hidden>This video could not be loaded. Check that the file exists in the assets folder.</p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
